@@ -53,7 +53,11 @@ const Login = () => {
           Nhập thông tin để tiếp tục khám phá
         </p>
 
-        <AuthForm onSubmit={handleLogin} buttonText="Đăng nhập" />
+        <AuthForm
+          onSubmit={handleLogin}
+          buttonText="Đăng nhập"
+          isLoading={loginMutation.isPending}
+        />
 
         <div className="mt-6 text-center text-sm text-gray-600">
           Chưa có tài khoản?{" "}

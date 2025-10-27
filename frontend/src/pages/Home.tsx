@@ -1,4 +1,3 @@
-// HomePage.tsx
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { LogOut, User, Calendar, Mail } from "lucide-react";
@@ -90,23 +89,6 @@ const HomePage = () => {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Welcome Card */}
-        <Card className="mb-6 border-2">
-          <CardHeader>
-            <div className="flex items-center gap-4">
-              <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
-                <User className="h-8 w-8 text-white" />
-              </div>
-              <div>
-                <CardTitle className="text-3xl">Chào mừng trở lại!</CardTitle>
-                <CardDescription className="text-base mt-1">
-                  Rất vui được gặp lại bạn
-                </CardDescription>
-              </div>
-            </div>
-          </CardHeader>
-        </Card>
-
         {/* Info Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-6">
           {/* Email Card */}

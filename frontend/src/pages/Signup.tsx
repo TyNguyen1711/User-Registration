@@ -3,6 +3,7 @@ import { registerUser } from "@/services/authService";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+
 const Signup = () => {
   const navigate = useNavigate();
   const registerMutation = useMutation({
@@ -49,7 +50,11 @@ const Signup = () => {
           Tạo tài khoản mới để bắt đầu
         </p>
 
-        <AuthForm onSubmit={handleSignup} buttonText="Đăng ký" />
+        <AuthForm
+          onSubmit={handleSignup}
+          buttonText="Đăng ký"
+          isLoading={registerMutation.isPending}
+        />
 
         <div className="mt-6 text-center text-sm text-gray-600">
           Đã có tài khoản?{" "}
@@ -66,4 +71,5 @@ const Signup = () => {
     </div>
   );
 };
+
 export default Signup;
