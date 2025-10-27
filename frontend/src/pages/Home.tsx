@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { LogOut, User, Calendar, Mail } from "lucide-react";
+import { LogOut, Calendar, Mail } from "lucide-react";
 import { useUser } from "@/contexts/UserContext";
 import {
   Card,
