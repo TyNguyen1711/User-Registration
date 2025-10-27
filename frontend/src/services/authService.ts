@@ -12,9 +12,10 @@ export interface AuthResponse {
     createdAt: string;
   };
 }
-
+console.log("test: ", (import.meta.env as any).VITE_SERVER_URL);
 const SERVER_URL =
-  (import.meta.env as any).SERVER_URL ?? "http://localhost:3000";
+  (import.meta.env as any).VITE_SERVER_URL || "http://localhost:3000";
+console.log("test2: ", SERVER_URL);
 
 export const registerUser = async (data: AuthData): Promise<AuthResponse> => {
   const response = await fetch(`${SERVER_URL}/user/register`, {
