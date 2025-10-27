@@ -12,7 +12,7 @@ export interface AuthResponse {
     createdAt: string;
   };
 }
-// Register API
+
 const SERVER_URL =
   (import.meta.env as any).SERVER_URL ?? "http://localhost:3000";
 
